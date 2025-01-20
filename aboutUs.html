@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>SAMSUNG | About Us</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung Logo"
+                    width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-pills ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="detailProduct.html">Detail Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="aboutUs.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header end -->
+
+
+
+    <!-- content -->
+
+    <!-- (permainan js) -->
+    <div class="container main-content mt-5">
+        <div class="border border-dark rounded p-4 shadow-sm mx-auto" style="max-width: 600px;">
+            <h1 class="text-center text-primary">Permainan Apakah Kamu Manusia</h1>
+            <div class="text-center my-4">
+                <button class="btn btn-success" onclick="generateRandomString()">Generate Random</button>
+                <p id="randomString" class="mt-3 fs-4 fw-bold text-dark"></p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="userInput" class="form-label">Masukkan Teks:</label>
+                        <input type="text" id="userInput" class="form-control"
+                            placeholder="Masukkan teks sesuai random">
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="checkInput()">Check</button>
+
+                    <div class="text-center mt-2" id="nextButtonDiv" style="display: none;">
+                        <a href="#aboutUsPage" class="btn btn-success w-100" onclick="showAboutUs()">Lanjut ke About
+                            Us</a>
+                    </div>
+                    <p id="message" class="mt-3 fs-5 text-center"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Penjelasan permainan -->
+        <div class="mt-5 pt-4 pb-3 border-top">
+            <h2 class="text-center text-secondary">Tentang Permainan</h2>
+            <p class="text-center fs-5 text-muted mx-4">
+                Permainan JavaScript (Apakah Kamu Manusia) ini adalah tentang merandom angka dan huruf sebanyak 7 digit.
+                User harus menekan tombol <strong>Generate Random</strong> untuk menghasilkan hasil randoman.
+                Lalu User disuruh menginputkan ulang hasil randoman. Jika benar, si User bisa lanjut ke halaman
+                <strong>About Us</strong>.
+                Jika tidak, maka tidak bisa lanjut ke halaman <strong>About Us</strong>.
+            </p>
+        </div>
+    </div>
+    <!-- (permainan js) end -->
+
+
+    <!-- (about us) -->
+    <div class="mt-5 pt-4 pb-3 border-top" style="display: none;" id="aboutUsPage">
+        <h2 class="text-center text-secondary">Identitas Pribadi</h2>
+        <div class="d-flex flex-column align-items-center">
+            <img src="img/profil.jpg" alt="Foto Profil" class="img-fluid rounded-circle mb-3"
+                style="width: 150px; height: 150px;">
+
+            <blockquote class="blockquote text-center mb-4" style="font-style: italic; color: #6c757d;">
+                <p>"Apapun Yang Terjadi, Tetaplah Bernafas"</p>
+                <footer class="blockquote-footer">Gilbert Antonius Wijaya</footer>
+            </blockquote>
+
+            <div class="text-center w-100" style="color: black;">
+                <p><strong>Nama:</strong> Gilbert Antonius Wijaya</p>
+                <p><strong>Alamat:</strong> Banyu Urip 232</p>
+                <p><strong>No Telp:</strong> 08134242765</p>
+                <p><strong>Pendidikan:</strong> Mahasiswa (ISTTS)</p>
+                <p><strong>Status:</strong> Jomblo</p>
+                <p><strong>Hobi:</strong> Main Game</p>
+                <p><strong>Usia:</strong> 18 Tahun</p>
+                <p><strong>Tempat/Tanggal Lahir:</strong> Surabaya, 12 Mei 2006</p>
+                <p><strong>Jurusan:</strong> Informatika</p>
+            </div>
+        </div>
+    </div>
+    <!-- (about us) end -->
+
+    <!-- content end -->
+
+
+
+    <!-- footer -->
+    <footer class="bg-dark text-white py-sm-3 mt-sm-3 py-lg-3 mt-lg-3 responsive-footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Samsung. All Rights Reserved.</p>
+            <p>
+                <a href="#" class="text-white text-decoration-none">Privacy Policy</a> |
+                <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+            </p>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="https://www.facebook.com/Samsung" target="_blank" class="text-white me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/Samsung" target="_blank" class="text-white me-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/samsungmobile" target="_blank" class="text-white me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/samsung-electronics" target="_blank" class="text-white">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <script>
+        let result = '';
+
+        function generateRandomString() {
+            const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            result = '';
+            for (let i = 0; i < 7; i++) {
+                const randomIndex = Math.floor(Math.random() * chars.length);
+                result += chars[randomIndex];
+            }
+            document.getElementById("randomString").innerHTML = result;
+        }
+
+        function checkInput() {
+            const userInput = document.getElementById("userInput").value;
+            const message = document.getElementById("message");
+
+            if (!result) {
+                message.innerHTML = '<h5 class="text-warning">Silakan generate random string terlebih dahulu.</h5>';
+                document.getElementById('nextButtonDiv').style.display = 'none';
+            } else if (!userInput) {
+                message.innerHTML = '<h5 class="text-warning">Masukkan teks untuk dicek.</h5>';
+                document.getElementById('nextButtonDiv').style.display = 'none';
+            } else if (userInput === result) {
+                message.innerHTML = '<h5 class="text-success">Benar!</h5>';
+                document.getElementById('nextButtonDiv').style.display = 'block';
+            } else {
+                message.innerHTML = '<h5 class="text-danger">Salah!</h5>';
+                document.getElementById('nextButtonDiv').style.display = 'none';
+            }
+        }
+
+        function showAboutUs() {
+            document.getElementById("aboutUsPage").style.display = "block"
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
